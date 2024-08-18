@@ -15,7 +15,8 @@
         devShell =
           pkgs.mkShell {
             buildInputs = [
-              zig.packages.${system}.master
+              # We need to match zig and zls version
+              zig.packages.${system}."0.13.0"
               pkgs.zls
             ];
           };
